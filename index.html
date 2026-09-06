@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>First Trust Home Care Appliances | New York City</title>
+
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: {
+            DEFAULT: '#0F1E3D',
+            light: '#16294F',
+            dark: '#0A1529',
+          },
+          slateink: '#1C2431',
+          gold: {
+            DEFAULT: '#C9A24B',
+            light: '#DCC280',
+            dark: '#A8823A',
+          },
+          cream: '#F8F6F1',
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+  body { background-color: #F8F6F1; }
+  .font-serif { font-optical-sizing: auto; }
+</style>
+</head>
+
+<body class="font-sans text-slateink antialiased">
+
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <div class="bg-navy-dark text-cream text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 text-center">
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-truck-fast text-gold text-xs"></i>
+        Same-Day Delivery Available Across New York City
+      </span>
+      <span class="hidden sm:inline text-white/25">|</span>
+      <a href="tel:2125558787" class="flex items-center gap-2 hover:text-gold transition-colors">
+        <i class="fa-solid fa-phone text-gold text-xs"></i>
+        Call Us: (212) 555-TRUST
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="bg-white border-b border-navy/10 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-4 py-4 lg:py-5">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 shrink-0">
+          <img src="logo-icon.png" alt="First Trust Home Care Appliances shield logo" class="w-11 h-11 lg:w-12 lg:h-12 object-contain" />
+          <div class="leading-tight">
+            <p class="font-serif text-lg lg:text-xl font-semibold text-navy tracking-tight">First Trust</p>
+            <p class="text-[10px] lg:text-xs tracking-wide text-slateink/60 -mt-0.5">Home Care Appliances &middot; NYC</p>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="hidden md:flex flex-1 max-w-xl mx-4">
+          <div class="relative w-full">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search refrigerators, washers, air purifiers…"
+              class="w-full bg-cream border border-navy/15 rounded-md py-2.5 pl-4 pr-11 text-sm text-slateink placeholder:text-slateink/40 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-shadow"
+            />
+            <button class="absolute right-0 top-0 h-full px-3.5 text-navy/70 hover:text-navy transition-colors">
+              <i class="fa-solid fa-magnifying-glass text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Utility Icons -->
+        <div class="flex items-center gap-4 lg:gap-6 shrink-0">
+
+          <!-- Contact / NYC Location -->
+          <a href="#" class="hidden lg:flex items-center gap-2 text-sm text-slateink/80 hover:text-navy transition-colors">
+            <i class="fa-solid fa-location-dot text-gold"></i>
+            <span class="leading-tight">
+              <span class="block text-xs text-slateink/50">Visit our showroom</span>
+              <span class="block font-medium">New York, NY</span>
+            </span>
+          </a>
+
+          <div class="hidden lg:block w-px h-8 bg-navy/10"></div>
+
+          <!-- Wishlist -->
+          <a href="#" class="relative text-slateink/70 hover:text-navy transition-colors">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </a>
+
+          <!-- Cart -->
+          <button type="button" id="open-cart-btn" class="relative text-slateink/70 hover:text-navy transition-colors">
+            <i class="fa-solid fa-bag-shopping text-xl"></i>
+            <span id="cart-count" class="absolute -top-2 -right-2.5 bg-gold text-navy text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile search (below logo row on small screens) -->
+      <div class="md:hidden pb-4">
+        <div class="relative w-full">
+          <input
+            type="text"
+            id="search-input-mobile"
+            placeholder="Search appliances…"
+            class="w-full bg-cream border border-navy/15 rounded-md py-2.5 pl-4 pr-11 text-sm placeholder:text-slateink/40 focus:outline-none focus:ring-2 focus:ring-gold/50"
+          />
+          <button class="absolute right-0 top-0 h-full px-3.5 text-navy/70">
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="bg-navy text-white/90 hidden md:block">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ul class="flex items-center justify-center gap-8 lg:gap-10 text-sm font-medium">
+        <li>
+          <a href="#major-kitchen" class="nav-link relative inline-block py-4 border-b-2 border-transparent hover:border-gold hover:text-gold transition-colors">
+            Major Kitchen Appliances
+          </a>
+        </li>
+        <li>
+          <a href="#countertop-kitchen" class="nav-link relative inline-block py-4 border-b-2 border-transparent hover:border-gold hover:text-gold transition-colors">
+            Countertop Kitchen Appliances
+          </a>
+        </li>
+        <li>
+          <a href="#laundry-cleaning" class="nav-link relative inline-block py-4 border-b-2 border-transparent hover:border-gold hover:text-gold transition-colors">
+            Laundry &amp; Cleaning
+          </a>
+        </li>
+        <li>
+          <a href="#climate-control" class="nav-link relative inline-block py-4 border-b-2 border-transparent hover:border-gold hover:text-gold transition-colors">
+            Climate Control &amp; Air Quality
+          </a>
+        </li>
+        <li>
+          <a href="#personal-care" class="nav-link relative inline-block py-4 border-b-2 border-transparent hover:border-gold hover:text-gold transition-colors">
+            Personal Care &amp; Utilities
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile nav (simple horizontal scroll) -->
+  <nav class="bg-navy text-white/90 md:hidden overflow-x-auto">
+    <ul class="flex items-center gap-6 px-4 py-3 text-sm font-medium whitespace-nowrap">
+      <li><a href="#major-kitchen" class="nav-link hover:text-gold transition-colors">Major Kitchen</a></li>
+      <li><a href="#countertop-kitchen" class="nav-link hover:text-gold transition-colors">Countertop</a></li>
+      <li><a href="#laundry-cleaning" class="nav-link hover:text-gold transition-colors">Laundry &amp; Cleaning</a></li>
+      <li><a href="#climate-control" class="nav-link hover:text-gold transition-colors">Climate &amp; Air</a></li>
+      <li><a href="#personal-care" class="nav-link hover:text-gold transition-colors">Personal Care</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section
+    class="relative overflow-hidden bg-navy bg-cover bg-center"
+    style="background-image: linear-gradient(100deg, rgba(15,30,61,0.96) 0%, rgba(15,30,61,0.93) 38%, rgba(15,30,61,0.62) 68%, rgba(15,30,61,0.35) 100%), url('storefront-bg.jpeg');"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-16 lg:py-28">
+
+        <!-- Copy -->
+        <div class="relative z-10 max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
+          <p class="inline-flex items-center gap-2 text-gold text-sm font-medium mb-5">
+            <i class="fa-solid fa-map-pin"></i>
+            Serving all five boroughs of New York City
+          </p>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight">
+            New York&rsquo;s Most Trusted Home Appliances
+          </h1>
+
+          <p class="mt-6 text-lg text-white/70 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            From refrigerators to washer-dryers, we deliver dependable appliances to NYC homes fast &mdash; with real warranties and a team that actually picks up the phone.
+          </p>
+
+          <div class="mt-9 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+            <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-3.5 rounded-md transition-colors text-base">
+              Shop All Appliances
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="mt-11 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center lg:items-start gap-6 sm:gap-0 justify-center lg:justify-start">
+
+            <div class="flex items-center gap-3 sm:pr-6">
+              <i class="fa-solid fa-truck-fast text-gold text-xl w-6 text-center"></i>
+              <div class="text-left">
+                <p class="text-white text-sm font-semibold">Same-Day NYC Delivery</p>
+                <p class="text-white/50 text-xs">Order before 2pm</p>
+              </div>
+            </div>
+
+            <div class="hidden sm:block w-px h-10 bg-white/10"></div>
+
+            <div class="flex items-center gap-3 sm:px-6">
+              <i class="fa-solid fa-certificate text-gold text-xl w-6 text-center"></i>
+              <div class="text-left">
+                <p class="text-white text-sm font-semibold">Warranty Included</p>
+                <p class="text-white/50 text-xs">On every appliance</p>
+              </div>
+            </div>
+
+            <div class="hidden sm:block w-px h-10 bg-white/10"></div>
+
+            <div class="flex items-center gap-3 sm:pl-6">
+              <i class="fa-solid fa-headset text-gold text-xl w-6 text-center"></i>
+              <div class="text-left">
+                <p class="text-white text-sm font-semibold">24/7 Support</p>
+                <p class="text-white/50 text-xs">Always here to help</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- subtle bottom fade into page background -->
+    <div class="h-10 bg-gradient-to-b from-transparent to-cream/0"></div>
+  </section>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="bg-cream">
+
+    <!-- ============ SECTION 1: MAJOR KITCHEN APPLIANCES ============ -->
+    <section id="major-kitchen" class="scroll-mt-32 py-16 lg:py-20 border-b border-navy/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-10 flex items-end justify-between gap-4">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-navy">Major Kitchen Appliances</h2>
+            <div class="mt-2 w-14 h-0.5 bg-gold"></div>
+          </div>
+          <a href="#" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-gold transition-colors shrink-0">
+            View all <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+          <!-- 1. Refrigerator / Freezer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Refrigerator / Freezer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.5 (203)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">1,299.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Refrigerator / Freezer" data-price="1299.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Microwave Oven -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Microwave Oven</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.0 (156)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">199.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Microwave Oven" data-price="199.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. Dishwasher -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Dishwasher</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.5 (189)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">649.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Dishwasher" data-price="649.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 4. Gas / Electric Range -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Gas / Electric Range</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.7 (142)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">899.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Gas / Electric Range" data-price="899.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 5. Garbage Disposal -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Garbage Disposal</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.2 (98)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">129.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Garbage Disposal" data-price="129.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 6. Chest / Upright Freezer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Chest / Upright Freezer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.3 (76)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">499.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Chest / Upright Freezer" data-price="499.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 7. Range Hood -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Range Hood</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.4 (64)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">249.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Range Hood" data-price="249.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 8. Wall Oven -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Wall Oven</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.6 (58)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">1,099.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Wall Oven" data-price="1099.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 9. Induction / Electric Cooktop -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Induction / Electric Cooktop</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.5 (91)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">599.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Induction / Electric Cooktop" data-price="599.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 10. Built-in Ice Maker -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Built-in Ice Maker</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.1 (47)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">799.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Built-in Ice Maker" data-price="799.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 2: COUNTERTOP KITCHEN APPLIANCES ============ -->
+    <section id="countertop-kitchen" class="scroll-mt-32 py-16 lg:py-20 border-b border-navy/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-10 flex items-end justify-between gap-4">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-navy">Countertop Kitchen Appliances</h2>
+            <div class="mt-2 w-14 h-0.5 bg-gold"></div>
+          </div>
+          <a href="#" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-gold transition-colors shrink-0">
+            View all <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+          <!-- 11. Drip / Single-Serve Coffee Maker -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Drip / Single-Serve Coffee Maker</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.4 (312)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">89.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Drip / Single-Serve Coffee Maker" data-price="89.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 12. Philips 3000 Series Digital Air Fryer — BESTSELLER -->
+          <div class="product-card group bg-white rounded-lg border border-gold/40 overflow-hidden hover:shadow-lg hover:border-gold transition-all duration-200 flex flex-col ring-1 ring-gold/20">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <span class="absolute top-2.5 left-2.5 bg-gold text-navy text-[10px] font-semibold tracking-wide px-2.5 py-1 rounded">Bestseller</span>
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Philips 3000 Series Digital Air Fryer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.8 (587)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">149.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Philips 3000 Series Digital Air Fryer" data-price="149.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 13. Toaster / Toaster Oven -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Toaster / Toaster Oven</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.3 (245)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">69.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Toaster / Toaster Oven" data-price="69.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 14. High-Speed Blender -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">High-Speed Blender</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.6 (198)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">129.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="High-Speed Blender" data-price="129.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 15. Slow Cooker (Crock-Pot) -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Slow Cooker (Crock-Pot)</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.5 (276)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">49.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Slow Cooker (Crock-Pot)" data-price="49.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 16. Instant Pot / Multi-Cooker -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Instant Pot / Multi-Cooker</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.7 (421)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">99.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Instant Pot / Multi-Cooker" data-price="99.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 17. Electric Kettle -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Electric Kettle</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.4 (167)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">39.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Electric Kettle" data-price="39.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 18. Food Processor -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Food Processor</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.3 (134)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">119.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Food Processor" data-price="119.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 19. Stand Mixer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Stand Mixer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.9 (356)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">279.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Stand Mixer" data-price="279.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 20. Hand Mixer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Hand Mixer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.2 (89)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">29.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Hand Mixer" data-price="29.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 21. Countertop Ice Maker -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Countertop Ice Maker</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.1 (72)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">159.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Countertop Ice Maker" data-price="159.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 22. Rice Cooker -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Rice Cooker</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.5 (203)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">59.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Rice Cooker" data-price="59.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 23. Juicer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Juicer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.2 (118)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">89.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Juicer" data-price="89.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 24. Waffle Maker -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Waffle Maker</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.3 (95)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">34.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Waffle Maker" data-price="34.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 25. Vacuum Sealer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Vacuum Sealer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.4 (143)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">79.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Vacuum Sealer" data-price="79.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3: LAUNDRY & CLEANING ============ -->
+    <section id="laundry-cleaning" class="scroll-mt-32 py-16 lg:py-20 border-b border-navy/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-10 flex items-end justify-between gap-4">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-navy">Laundry &amp; Cleaning</h2>
+            <div class="mt-2 w-14 h-0.5 bg-gold"></div>
+          </div>
+          <a href="#" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-gold transition-colors shrink-0">
+            View all <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+          <!-- 26. Washing Machine -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Washing Machine</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.6 (198)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">749.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Washing Machine" data-price="749.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 27. Clothes Dryer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Clothes Dryer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.5 (156)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">699.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Clothes Dryer" data-price="699.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 28. Cordless Stick Vacuum -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Cordless Stick Vacuum</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.7 (342)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">249.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Cordless Stick Vacuum" data-price="249.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 29. Robot Vacuum -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Robot Vacuum</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.4 (289)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">329.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Robot Vacuum" data-price="329.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 30. Upright Vacuum Cleaner -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Upright Vacuum Cleaner</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.2 (167)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">179.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Upright Vacuum Cleaner" data-price="179.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 31. Carpet Cleaner / Shampooer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Carpet Cleaner / Shampooer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.1 (98)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">219.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Carpet Cleaner / Shampooer" data-price="219.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 32. Steam Mop -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Steam Mop</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.3 (211)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">89.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Steam Mop" data-price="89.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 33. Handheld Spot Cleaner -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Handheld Spot Cleaner</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.0 (87)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">119.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Handheld Spot Cleaner" data-price="119.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 34. Garment Steamer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Garment Steamer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.4 (176)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">59.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Garment Steamer" data-price="59.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 4: CLIMATE CONTROL & AIR QUALITY ============ -->
+    <section id="climate-control" class="scroll-mt-32 py-16 lg:py-20 border-b border-navy/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-10 flex items-end justify-between gap-4">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-navy">Climate Control &amp; Air Quality</h2>
+            <div class="mt-2 w-14 h-0.5 bg-gold"></div>
+          </div>
+          <a href="#" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-gold transition-colors shrink-0">
+            View all <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+          <!-- 35. Air Purifier -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Air Purifier</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.5 (298)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">169.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Air Purifier" data-price="169.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 36. Dehumidifier -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Dehumidifier</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.3 (145)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">199.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Dehumidifier" data-price="199.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 37. Humidifier -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Humidifier</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.2 (203)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">49.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Humidifier" data-price="49.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 38. Smart Thermostat -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Smart Thermostat</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.6 (267)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">189.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Smart Thermostat" data-price="189.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 39. Portable Air Conditioner -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Portable Air Conditioner</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.1 (134)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">399.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Portable Air Conditioner" data-price="399.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 40. Window Air Conditioner -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Window Air Conditioner</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.4 (189)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">279.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Window Air Conditioner" data-price="279.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 41. Oscillating Tower Fan -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Oscillating Tower Fan</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.3 (156)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">69.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Oscillating Tower Fan" data-price="69.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 42. Space Heater -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Space Heater</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.2 (112)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">59.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Space Heater" data-price="59.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 5: PERSONAL CARE & UTILITIES ============ -->
+    <section id="personal-care" class="scroll-mt-32 py-16 lg:py-20 border-b border-navy/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-10 flex items-end justify-between gap-4">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-navy">Personal Care &amp; Utilities</h2>
+            <div class="mt-2 w-14 h-0.5 bg-gold"></div>
+          </div>
+          <a href="#" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-gold transition-colors shrink-0">
+            View all <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+          <!-- 43. Hair Dryer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Hair Dryer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.3 (234)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">49.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Hair Dryer" data-price="49.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 44. Electric Toothbrush -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Electric Toothbrush</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.7 (412)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">69.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Electric Toothbrush" data-price="69.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 45. Water Flosser -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Water Flosser</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.5 (198)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">59.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Water Flosser" data-price="59.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 46. Hair Straightener / Curling Iron -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Hair Straightener / Curling Iron</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </span>
+                <span class="text-slateink/50">4.1 (145)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">39.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Hair Straightener / Curling Iron" data-price="39.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 47. Electric Shaver / Grooming Trimmer -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Electric Shaver / Grooming Trimmer</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.4 (167)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">79.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Electric Shaver / Grooming Trimmer" data-price="79.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 48. Water Heater (Tankless/Tank) -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Water Heater (Tankless/Tank)</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.6 (89)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">899.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Water Heater (Tankless/Tank)" data-price="899.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 49. Water Softener / Filtration System -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Water Softener / Filtration System</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.5 (76)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">499.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Water Softener / Filtration System" data-price="499.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 50. Sump Pump -->
+          <div class="product-card group bg-white rounded-lg border border-navy/10 overflow-hidden hover:shadow-lg hover:border-navy/20 transition-all duration-200 flex flex-col">
+            <div class="relative aspect-square bg-navy/5 flex items-center justify-center">
+              <i class="fa-regular fa-image text-navy/15 text-5xl"></i>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="font-medium text-sm sm:text-base text-navy leading-snug mb-1">Sump Pump</h3>
+              <div class="flex items-center gap-1.5 mb-2 text-xs">
+                <span class="flex items-center gap-0.5 text-gold">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="text-slateink/50">4.3 (54)</span>
+              </div>
+              <p class="font-serif text-lg font-semibold text-navy mb-2">189.00</p>
+              <p class="flex items-center gap-1.5 text-xs text-green-700 mb-4">
+                <i class="fa-solid fa-circle-check"></i> In Stock &ndash; NYC Warehouse
+              </p>
+              <button type="button" class="add-to-cart-btn mt-auto w-full inline-flex items-center justify-center gap-2 bg-navy hover:bg-gold hover:text-navy text-white text-sm font-medium py-2.5 rounded-md transition-colors" data-name="Sump Pump" data-price="189.00">
+                <i class="fa-solid fa-cart-plus text-xs"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy-dark text-white/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+
+        <!-- Brand -->
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="inline-block bg-cream rounded-lg p-3 mb-5">
+            <img src="logo-full.png" alt="First Trust Home Care Appliances" class="h-20 w-auto object-contain" />
+          </div>
+          <p class="text-sm leading-relaxed text-white/60 max-w-xs">
+            New York City's trusted source for major and countertop appliances, backed by real warranties and a team that's always reachable.
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white font-serif text-lg font-semibold mb-5">Visit or Call Us</h3>
+          <ul class="space-y-3.5 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-gold mt-0.5"></i>
+              <span>450 5th Avenue<br>New York, NY 10018</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-gold"></i>
+              <a href="tel:+18583081857" class="hover:text-gold transition-colors">+1 (858) 308-1857</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-gold"></i>
+              <a href="mailto:support@firsttrustappliances.com" class="hover:text-gold transition-colors">support@firsttrustappliances.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-clock text-gold mt-0.5"></i>
+              <span>Mon&ndash;Sat: 8 AM &ndash; 10 PM<br>Sun: 10 AM &ndash; 8 PM</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Delivery Coverage -->
+        <div>
+          <h3 class="text-white font-serif text-lg font-semibold mb-5">NYC Delivery Coverage</h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-truck-fast text-gold text-xs"></i> Manhattan</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-truck-fast text-gold text-xs"></i> Brooklyn</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-truck-fast text-gold text-xs"></i> Queens</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-truck-fast text-gold text-xs"></i> Bronx</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-truck-fast text-gold text-xs"></i> Staten Island</li>
+          </ul>
+        </div>
+
+        <!-- Shop Links -->
+        <div>
+          <h3 class="text-white font-serif text-lg font-semibold mb-5">Shop by Category</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#major-kitchen" class="nav-link hover:text-gold transition-colors">Major Kitchen Appliances</a></li>
+            <li><a href="#countertop-kitchen" class="nav-link hover:text-gold transition-colors">Countertop Kitchen Appliances</a></li>
+            <li><a href="#laundry-cleaning" class="nav-link hover:text-gold transition-colors">Laundry &amp; Cleaning</a></li>
+            <li><a href="#climate-control" class="nav-link hover:text-gold transition-colors">Climate Control &amp; Air Quality</a></li>
+            <li><a href="#personal-care" class="nav-link hover:text-gold transition-colors">Personal Care &amp; Utilities</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Payment badges + copyright -->
+      <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2.5 order-2 md:order-1">
+          <p class="text-xs text-white/50">&copy; 2026 First Trust Home Care Appliances. All rights reserved.</p>
+        </div>
+        <div class="flex items-center gap-3 order-1 md:order-2">
+          <span class="text-xs text-white/40 mr-1">Secure payments:</span>
+          <div class="w-10 h-7 rounded bg-white/95 flex items-center justify-center">
+            <i class="fa-brands fa-cc-visa text-navy text-lg"></i>
+          </div>
+          <div class="w-10 h-7 rounded bg-white/95 flex items-center justify-center">
+            <i class="fa-brands fa-cc-mastercard text-navy text-lg"></i>
+          </div>
+          <div class="w-10 h-7 rounded bg-white/95 flex items-center justify-center">
+            <i class="fa-brands fa-cc-amex text-navy text-lg"></i>
+          </div>
+          <div class="w-10 h-7 rounded bg-white/95 flex items-center justify-center">
+            <i class="fa-brands fa-cc-paypal text-navy text-lg"></i>
+          </div>
+          <div class="w-10 h-7 rounded bg-white/95 flex items-center justify-center">
+            <i class="fa-brands fa-apple-pay text-navy text-lg"></i>
+          </div>
+          <div class="w-10 h-7 rounded bg-gold flex items-center justify-center" title="SSL Secured Checkout">
+            <i class="fa-solid fa-lock text-navy text-sm"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ CART SLIDE-OVER DRAWER ============ -->
+  <div id="cart-overlay" class="fixed inset-0 bg-navy-dark/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+  <aside
+    id="cart-drawer"
+    class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col"
+    aria-label="Shopping cart"
+  >
+    <!-- Drawer header -->
+    <div class="flex items-center justify-between px-5 sm:px-6 py-5 border-b border-navy/10">
+      <h2 class="font-serif text-xl font-semibold text-navy flex items-center gap-2.5">
+        <i class="fa-solid fa-bag-shopping text-gold text-lg"></i>
+        Your Cart
+      </h2>
+      <button type="button" id="close-cart-btn" class="text-slateink/60 hover:text-navy transition-colors w-9 h-9 flex items-center justify-center rounded-full hover:bg-cream">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Cart items -->
+    <div id="cart-items" class="flex-1 overflow-y-auto px-5 sm:px-6 py-5 space-y-4">
+      <!-- Populated by JS; empty state shown by default -->
+      <div id="cart-empty-state" class="h-full flex flex-col items-center justify-center text-center py-16">
+        <i class="fa-solid fa-bag-shopping text-navy/10 text-6xl mb-4"></i>
+        <p class="text-slateink/60 text-sm">Your cart is empty.</p>
+        <p class="text-slateink/40 text-xs mt-1">Add an appliance to get started.</p>
+      </div>
+    </div>
+
+    <!-- Drawer footer: totals + checkout -->
+    <div class="border-t border-navy/10 px-5 sm:px-6 py-5 space-y-3 bg-cream">
+      <div class="flex items-center justify-between text-sm text-slateink/70">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <div class="flex items-center justify-between text-sm text-slateink/70">
+        <span>NYC Sales Tax (8.875%)</span>
+        <span id="cart-tax">$0.00</span>
+      </div>
+      <div class="flex items-center justify-between pt-3 border-t border-navy/10 text-base font-semibold text-navy">
+        <span>Total</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button
+        type="button"
+        id="checkout-btn"
+        class="w-full mt-2 inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy font-semibold py-3.5 rounded-md transition-colors text-base"
+      >
+        Proceed to Checkout
+        <i class="fa-solid fa-arrow-right text-sm"></i>
+      </button>
+      <p class="text-center text-xs text-slateink/40 pt-1">
+        <i class="fa-solid fa-lock mr-1"></i> Secure NYC checkout
+      </p>
+    </div>
+  </aside>
+
+  <!-- ============ VANILLA JAVASCRIPT ============ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------------------------------------------------
+         STATE
+      --------------------------------------------------- */
+      const TAX_RATE = 0.08875; // NYC sales tax
+      let cart = {}; // { "Product Name": { price: 99.00, qty: 2 } }
+
+      /* ---------------------------------------------------
+         DOM REFERENCES
+      --------------------------------------------------- */
+      const cartCountEl = document.getElementById('cart-count');
+      const cartItemsEl = document.getElementById('cart-items');
+      const cartSubtotalEl = document.getElementById('cart-subtotal');
+      const cartTaxEl = document.getElementById('cart-tax');
+      const cartTotalEl = document.getElementById('cart-total');
+      const cartDrawer = document.getElementById('cart-drawer');
+      const cartOverlay = document.getElementById('cart-overlay');
+      const openCartBtn = document.getElementById('open-cart-btn');
+      const closeCartBtn = document.getElementById('close-cart-btn');
+      const checkoutBtn = document.getElementById('checkout-btn');
+      const searchInputDesktop = document.getElementById('search-input');
+      const searchInputMobile = document.getElementById('search-input-mobile');
+
+      /* ---------------------------------------------------
+         HELPERS
+      --------------------------------------------------- */
+      function formatCurrency(amount) {
+        return '$' + amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      }
+
+      function getCartCount() {
+        return Object.values(cart).reduce((sum, item) => sum + item.qty, 0);
+      }
+
+      function getCartSubtotal() {
+        return Object.values(cart).reduce((sum, item) => sum + item.price * item.qty, 0);
+      }
+
+      /* ---------------------------------------------------
+         CART RENDERING
+      --------------------------------------------------- */
+      function renderCart() {
+        const names = Object.keys(cart);
+
+        // Update header badge
+        const count = getCartCount();
+        cartCountEl.textContent = count;
+
+        // Empty state
+        if (names.length === 0) {
+          cartItemsEl.innerHTML = `
+            <div id="cart-empty-state" class="h-full flex flex-col items-center justify-center text-center py-16">
+              <i class="fa-solid fa-bag-shopping text-navy/10 text-6xl mb-4"></i>
+              <p class="text-slateink/60 text-sm">Your cart is empty.</p>
+              <p class="text-slateink/40 text-xs mt-1">Add an appliance to get started.</p>
+            </div>`;
+        } else {
+          cartItemsEl.innerHTML = names.map(function (name) {
+            const item = cart[name];
+            const lineTotal = item.price * item.qty;
+            return `
+              <div class="flex gap-3 items-start border-b border-navy/5 pb-4 cart-line-item" data-name="${escapeHtml(name)}">
+                <div class="w-16 h-16 shrink-0 rounded-md bg-navy/5 flex items-center justify-center">
+                  <i class="fa-regular fa-image text-navy/20 text-xl"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm font-medium text-navy leading-snug truncate">${escapeHtml(name)}</p>
+                  <p class="text-xs text-slateink/50 mt-0.5">${formatCurrency(item.price)} each</p>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button type="button" class="qty-decrease w-6 h-6 rounded border border-navy/15 text-navy/70 hover:border-navy hover:text-navy flex items-center justify-center text-xs transition-colors">
+                      <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <span class="text-sm w-5 text-center">${item.qty}</span>
+                    <button type="button" class="qty-increase w-6 h-6 rounded border border-navy/15 text-navy/70 hover:border-navy hover:text-navy flex items-center justify-center text-xs transition-colors">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="text-right shrink-0">
+                  <p class="text-sm font-semibold text-navy">${formatCurrency(lineTotal)}</p>
+                  <button type="button" class="remove-item text-xs text-slateink/40 hover:text-red-600 transition-colors mt-2">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </button>
+                </div>
+              </div>`;
+          }).join('');
+        }
+
+        // Update totals
+        const subtotal = getCartSubtotal();
+        const tax = subtotal * TAX_RATE;
+        const total = subtotal + tax;
+        cartSubtotalEl.textContent = formatCurrency(subtotal);
+        cartTaxEl.textContent = formatCurrency(tax);
+        cartTotalEl.textContent = formatCurrency(total);
+      }
+
+      function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      /* ---------------------------------------------------
+         CART ACTIONS
+      --------------------------------------------------- */
+      function addToCart(name, price) {
+        if (cart[name]) {
+          cart[name].qty += 1;
+        } else {
+          cart[name] = { price: price, qty: 1 };
+        }
+        renderCart();
+        openCart();
+      }
+
+      function increaseQty(name) {
+        if (cart[name]) {
+          cart[name].qty += 1;
+          renderCart();
+        }
+      }
+
+      function decreaseQty(name) {
+        if (cart[name]) {
+          cart[name].qty -= 1;
+          if (cart[name].qty <= 0) {
+            delete cart[name];
+          }
+          renderCart();
+        }
+      }
+
+      function removeItem(name) {
+        delete cart[name];
+        renderCart();
+      }
+
+      /* ---------------------------------------------------
+         DRAWER OPEN / CLOSE
+      --------------------------------------------------- */
+      function openCart() {
+        cartDrawer.classList.remove('translate-x-full');
+        cartOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeCart() {
+        cartDrawer.classList.add('translate-x-full');
+        cartOverlay.classList.add('opacity-0', 'pointer-events-none');
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      openCartBtn.addEventListener('click', openCart);
+      closeCartBtn.addEventListener('click', closeCart);
+      cartOverlay.addEventListener('click', closeCart);
+
+      checkoutBtn.addEventListener('click', function () {
+        if (getCartCount() === 0) {
+          return;
+        }
+        alert('Thanks for shopping with First Trust! Checkout isn\'t wired up in this preview yet.');
+      });
+
+      /* ---------------------------------------------------
+         ADD TO CART BUTTON LISTENERS
+      --------------------------------------------------- */
+      document.querySelectorAll('.add-to-cart-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const name = btn.getAttribute('data-name');
+          const price = parseFloat(btn.getAttribute('data-price'));
+          addToCart(name, price);
+        });
+      });
+
+      /* ---------------------------------------------------
+         CART ITEM QTY / REMOVE (event delegation)
+      --------------------------------------------------- */
+      cartItemsEl.addEventListener('click', function (e) {
+        const lineItem = e.target.closest('.cart-line-item');
+        if (!lineItem) return;
+        const name = lineItem.getAttribute('data-name');
+
+        if (e.target.closest('.qty-increase')) {
+          increaseQty(name);
+        } else if (e.target.closest('.qty-decrease')) {
+          decreaseQty(name);
+        } else if (e.target.closest('.remove-item')) {
+          removeItem(name);
+        }
+      });
+
+      /* ---------------------------------------------------
+         SEARCH / FILTER
+      --------------------------------------------------- */
+      const productCards = document.querySelectorAll('.product-card');
+
+      function filterProducts(query) {
+        const q = query.trim().toLowerCase();
+        productCards.forEach(function (card) {
+          const titleEl = card.querySelector('h3');
+          const title = titleEl ? titleEl.textContent.toLowerCase() : '';
+          if (q === '' || title.includes(q)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+
+      if (searchInputDesktop) {
+        searchInputDesktop.addEventListener('input', function () {
+          if (searchInputMobile) searchInputMobile.value = searchInputDesktop.value;
+          filterProducts(searchInputDesktop.value);
+        });
+      }
+      if (searchInputMobile) {
+        searchInputMobile.addEventListener('input', function () {
+          if (searchInputDesktop) searchInputDesktop.value = searchInputMobile.value;
+          filterProducts(searchInputMobile.value);
+        });
+      }
+
+      /* ---------------------------------------------------
+         SMOOTH SCROLL FOR CATEGORY NAV LINKS
+      --------------------------------------------------- */
+      document.querySelectorAll('.nav-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          const href = link.getAttribute('href');
+          if (!href || href.charAt(0) !== '#') return;
+          const target = document.querySelector(href);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Initial render
+      renderCart();
+    })();
+  </script>
+
+</body>
+</html>
